@@ -49,7 +49,7 @@ TF_VAR_acm_certificate_arn=arn:aws:acm:...
 TF_STATE_BUCKET=insert-bucket-name-here
 TF_STATE_REGION=insert-region-here
 ```
-# Local Deploy
+# Initialise and plan Terragrunt
 ```
 cd infrastructure/modules/static_site
 terragrunt init
@@ -58,7 +58,7 @@ terragrunt plan \
   -var="domain_name=mydomain.com" \
   -var="acm_certificate_arn=arn:aws:acm:..."
 ```
-# To apply:
+# Apply Terragrunt:
 ```
 cd infrastructure/modules/static_site
 terragrunt apply
