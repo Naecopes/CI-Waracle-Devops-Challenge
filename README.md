@@ -36,6 +36,34 @@ This repository defines IaC to deploy a single-page static website on AWS using:
 
 ---
 
+## 🚀 Deployment Workflow (Local environment)
+
+# Terraform variable values
+```
+TF_VAR_bucket_name=insert-bucket-name-here
+TF_VAR_domain_name=insert-domain-name-here
+TF_VAR_acm_certificate_arn=arn:aws:acm:...
+```
+# Optional override backend config 
+```
+TF_STATE_BUCKET=insert-bucket-name-here
+TF_STATE_REGION=insert-region-here
+```
+# Local Deploy
+```
+cd infrastructure/modules/static_site
+terragrunt init
+terragrunt plan \
+  -var="bucket_name=my-site-bucket" \
+  -var="domain_name=mydomain.com" \
+  -var="acm_certificate_arn=arn:aws:acm:..."
+```
+# To apply:
+```
+cd infrastructure/modules/static_site
+terragrunt apply
+```
+
 ## 🚀 Deployment Workflow (CI/CD)
 
 ### ✅ Triggered only on **merge** into:
