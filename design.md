@@ -11,7 +11,7 @@ AWS was chosen for its powerful static hosting capabilities via S3 and global CD
 
 ## Components
 
-- **S3 Bucket**: For storing and serving the SPA's static assets, S3 was used to due it being lightweight, it is a simple SPA application and does not need container orchestration, it is low on cost, configurable permissions wise via IAM and scalable due to being fronted by a CDN.
+- **S3 Bucket**: For storing and serving the SPA's static assets, S3 was used to due it being lightweight, it is a simple SPA application and does not need container orchestration, it is low on cost, configurable permissions wise via IAM and scalable due to being fronted by a CDN. There is already existing modules that cover essentially this entire functionality however I statically typed it for this PoC and created a module. 
 - **CloudFront**: Edge caching, HTTPS support, domain mapping.
 - **ACM Certificate**: For enabling HTTPS via CloudFront.
 - **Terraform + Terragrunt**: Modular, DRY infrastructure-as-code setup.
