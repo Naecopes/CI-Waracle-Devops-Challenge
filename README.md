@@ -15,7 +15,7 @@ This repository defines IaC to deploy a single-page static website on AWS using:
 - **Deployment Role and Environment Accounts** - Create IAM roles following the concept of least priviledge and deploy to the relevant environments
 - **Full Branching and Deployment strategy** - As this is a PoC and not much time has been alloted to it if this application needed to scale further there would be discussions around what would fit bet for this client, a basic branching strategy with manual approval gates for Terragrunt with deploy on merge to dev, staging or prod has been implemented
 - **Tests** - Testing strategy (security, static analysis etc) would also need to be discussed, especially if this application was to grow in scale and expand beyond a SPA or implement further infrastructure such as a DB backend
-- **Monitoring and Observability** - Again, depending on scale and use case for this application 
+- **Monitoring, Observability and Logging** - Again, depending on scale and use case for this application. DNS endpoint monitoring may be sufficient for something like this that has very minimal traffic and does not need to scale.
 
 
 ## 🧩 Stack
