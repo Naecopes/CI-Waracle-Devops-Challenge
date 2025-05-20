@@ -36,22 +36,6 @@ This repository defines IaC to deploy a single-page static website on AWS using:
 
 ---
 
-## 📂 Repository Structure
-
-├── .github/
-│ └── workflows/
-│ └── terragrunt-deploy.yml # GitHub Actions pipeline
-│
-├── infrastructure/
-│ ├── terragrunt.hcl # Centralized Terragrunt config
-│ └── modules/
-│ └── static_site/
-│ ├── main.tf
-│ ├── variables.tf
-│ └── outputs.tf
-│
-└── README.md
-
 ## 🚀 Deployment Workflow (CI/CD)
 
 ### ✅ Triggered only on **merge** into:
