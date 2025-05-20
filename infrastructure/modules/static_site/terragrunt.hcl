@@ -1,3 +1,3 @@
-include "root" {
-  path = ../../../root.hcl
+include {
+  path = "../../../root.hcl"
 }
