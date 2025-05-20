@@ -13,8 +13,9 @@ This repository defines IaC to deploy a single-page static website on AWS using:
 ## TO-DO
 
 - **Deployment Role and Environment Accounts** - Create IAM roles following the concept of least priviledge and deploy to the relevant environments
-- **Full Branching and Deployment strategy** - As this is a PoC and not much time has been alloted to it if this application needed to scale further there would be discussions around what would fit bet for this client, a basic branching strategy with manual approval gates for Terragrunt with deploy on merge to dev, staging or prod has been implemented
-- **Tests** - Testing strategy (security, static analysis etc) would also need to be discussed, especially if this application was to grow in scale and expand beyond a SPA or implement further infrastructure such as a DB backend or other functionality
+- **Terraform Module Structure** - If the application continues to grow and further infrastructure is added, separate out into more logically defined .tf files rather than having within one main.tf
+- **Branching and Deployment Strategy** - As this is a PoC and not much time has been alloted to it if this application needed to scale further there would be discussions around what would fit bet for this client, a basic branching strategy with manual approval gates for Terragrunt with deploy on merge to dev, staging or prod has been implemented
+- **Testing Strategy** - Testing strategy (security, static analysis etc) would also need to be discussed, especially if this application was to grow in scale and expand beyond a SPA or implement further infrastructure such as a DB backend or other functionality
 - **Monitoring, Observability and Logging** - Again, depending on scale and use case for this application. DNS endpoint monitoring may be sufficient for something like this that has very minimal traffic and does not need to scale.
 - **Cost Management and Tagging Strategy** - Similar to other considerations, this would be part of the conversation if an application is going to cost and scale. In this case it should be light weight and would not be an extended conversation. Another aspect of this would be appending the environment to the resources and also tagging further aspects such as creation date, deployment environment and similar other aspects.
 
