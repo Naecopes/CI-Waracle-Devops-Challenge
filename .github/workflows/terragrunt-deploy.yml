@@ -36,12 +36,10 @@ jobs:
 
       - name: Terragrunt Init
         run: |
-          cd infrastructure/modules/static_site
           terragrunt init
 
       - name: Terragrunt Plan
         run: |
-          cd infrastructure/modules/static_site 
           terragrunt plan
 
   manual-approval:
@@ -90,10 +88,8 @@ jobs:
 
       - name: Terragrunt Init
         run: |
-          cd infrastructure/modules/static_site 
           terragrunt init
 
       - name: Terragrunt Apply
         run: |
-          cd infrastructure/modules/static_site 
           terragrunt apply -auto-approve
