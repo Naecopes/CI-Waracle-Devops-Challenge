@@ -1,5 +1,5 @@
 terraform {
-  source = "./infrastructure/modules/static_site"
+  source = "./infrastructure/modules/static_site/terragrunt.hcl"
 }
 
 locals {
