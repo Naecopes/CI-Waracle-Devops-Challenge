@@ -1,5 +1,5 @@
 terraform {
-  source = "./infrastructure/modules/static_site/terragrunt.hcl"
+   required_version = ">=1.12.0"
 }
 
 locals {
