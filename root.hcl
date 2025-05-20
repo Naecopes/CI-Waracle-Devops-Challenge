@@ -1,8 +1,7 @@
 terraform {
    required_version = ">=1.12.0"
+   source = "./infrastructure/modules/static_site"
 }
-
-source = "./infrastructure/modules/static_site"
 
 locals {
   region = "eu-west-2"
